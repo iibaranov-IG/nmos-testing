@@ -847,9 +847,8 @@ def init_spec_cache():
         if repo_data["repo"] is None:
             continue
         if not os.path.exists(path):
-            repo_url = repo_data.get("url", "https://github.com/AMWA-TV/")
-            print(" * Initialising repository '{}' at url '{}'".format(repo_data["repo"], repo_url))
-            repo = git.Repo.clone_from(repo_url + repo_data["repo"] + '.git', path)
+            print(" * Initialising repository '{}'".format(repo_data["repo"]))
+            repo = git.Repo.clone_from('https://github.com/AMWA-TV/' + repo_data["repo"] + '.git', path)
             update_last_pull = True
         else:
             repo = git.Repo(path)
@@ -1391,4 +1390,3 @@ def main(args):
 
     # Exit the application with the desired code
     sys.exit(exit_code)
-

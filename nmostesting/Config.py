@@ -170,8 +170,8 @@ SDP_PREFERENCES = {
     # video/raw, etc.
     "width": 1920,
     "height": 1080,
-    "interlace": False,
-    "exactframerate": "60",
+    "interlace": True,
+    "exactframerate": "25",
     "depth": 10,
     "sampling": "YCbCr-4:2:2",
     "colorimetry": "BT709",
@@ -396,17 +396,6 @@ SPECIFICATIONS = {
             }
         }
     },
-    "bcp-007-02": {
-        "repo": "bcp-007-02",
-        "branch": "v1.0-dev",
-        "versions": ["v1.0-dev"],
-        "default_version": "v1.0-dev",
-        "apis": {
-            "usb-transport": {
-                "name": "USB Transport Parameters Schemas"
-            }
-        }
-    },
     "bcp-008-01": {
         "repo": "bcp-008-01",
         "versions": ["v1.0"],
@@ -427,6 +416,12 @@ SPECIFICATIONS = {
             }
         }
     },
+    "bcp-005-01": {
+        "repo": "bcp-005-01",
+        "versions": ["v1.0"],
+        "default_version": "v1.0",
+        "apis": {}
+    },
     "nmos-parameter-registers": {
         "repo": "nmos-parameter-registers",
         "versions": ["main"],
@@ -440,12 +435,6 @@ SPECIFICATIONS = {
             },
             "sender-register": {
                 "name": "Sender Attributes Register"
-            },
-            "formats-register": {
-                "name": "Formats Register"
-            },
-            "media-types-register": {
-                "name": "Media Types Register"
             }
         }
     },
