@@ -318,6 +318,17 @@ SPECIFICATIONS = {
             },
         }
     },
+    "is-14": {
+        "repo": "is-14",
+        "versions": ["v1.0"],
+        "default_version": "v1.0",
+        "apis": {
+            "configuration": {
+                "name": "Device Configuration",
+                "raml": "ConfigurationAPI.raml"
+            },
+        }
+    },
     "ms-05-02": {
         "repo": "ms-05-02",
         "versions": ["v1.0"],
@@ -335,7 +346,7 @@ SPECIFICATIONS = {
         "apis": {
             "featuresets": {
                 "name": "Control Feature Sets",
-                "repo_paths": ["identification", "monitoring"]
+                "repo_paths": ["identification", "monitoring", "device-configuration"]
             }
         }
     },
@@ -377,27 +388,49 @@ SPECIFICATIONS = {
     },
     "bcp-004-02": {
         "repo": "bcp-004-02",
-        "branch": "v1.0-dev",
-        "versions": ["v1.0-dev"],
-        "default_version": "v1.0-dev",
+        "versions": ["v1.0"],
+        "default_version": "v1.0",
         "apis": {
             "sender-caps": {
                 "name": "Sender Capabilities"
             }
         }
     },
-    "bcp-005-01": {
-        "repo": "bcp-005-01",
+    "bcp-007-02": {
+        "repo": "bcp-007-02",
+        "branch": "v1.0-dev",
+        "versions": ["v1.0-dev"],
+        "default_version": "v1.0-dev",
+        "apis": {
+            "usb-transport": {
+                "name": "USB Transport Parameters Schemas"
+            }
+        }
+    },
+    "bcp-008-01": {
+        "repo": "bcp-008-01",
         "versions": ["v1.0"],
         "default_version": "v1.0",
-        "apis": {}
+        "apis": {
+            "receivermonitor": {
+                "name": "Receiver Monitor"
+            }
+        }
+    },
+    "bcp-008-02": {
+        "repo": "bcp-008-02",
+        "versions": ["v1.0"],
+        "default_version": "v1.0",
+        "apis": {
+            "sendermonitor": {
+                "name": "Sender Monitor"
+            }
+        }
     },
     "nmos-parameter-registers": {
         "repo": "nmos-parameter-registers",
-        "url": "https://github.com/alabou/",
-        "branch": "bcp-004-02",
-        "versions": ["bcp-004-02"],
-        "default_version": "bcp-004-02",
+        "versions": ["main"],
+        "default_version": "main",
         "apis": {
             "caps-register": {
                 "name": "Capabilities Register"
@@ -407,6 +440,12 @@ SPECIFICATIONS = {
             },
             "sender-register": {
                 "name": "Sender Attributes Register"
+            },
+            "formats-register": {
+                "name": "Formats Register"
+            },
+            "media-types-register": {
+                "name": "Media Types Register"
             }
         }
     },
