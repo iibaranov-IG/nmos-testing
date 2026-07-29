@@ -89,8 +89,10 @@ from .suites import BCP00301Test
 from .suites import BCP0050101Test
 from .suites import BCP0060101Test
 from .suites import BCP0060102Test
+from .suites import BCP0070302Test
 from .suites import BCP0040201Test
 from .suites import BCP00604Test
+from .suites import BCP0070301Test
 from .suites import BCP0080101Test
 from .suites import BCP0080201Test
 
@@ -460,6 +462,49 @@ TEST_DEFINITIONS = {
             "disable_fields": ["host", "port"]
         }],
         "class": BCP0060102Test.BCP0060102Test
+    },
+    "BCP-007-03-01": {
+        "name": "BCP-007-03 NMOS With MXL",
+        "specs": [{
+            "spec_key": "is-04",
+            "api_key": "node"
+        }, {
+            "spec_key": "is-05",
+            "api_key": "connection"
+        }],
+        "extra_specs": [{
+            "spec_key": "bcp-004-01",
+            "api_key": "receiver-caps"
+        }, {
+            "spec_key": "nmos-parameter-registers",
+            "api_key": "caps-register"
+        }, {
+            "spec_key": "nmos-parameter-registers",
+            "api_key": "formats-register"
+        }, {
+            "spec_key": "nmos-parameter-registers",
+            "api_key": "media-types-register"
+        }, {
+            "spec_key": "bcp-007-03",
+            "api_key": "mxl-schemas"
+        }],
+        "class": BCP0070301Test.BCP0070301Test
+    },
+    "BCP-007-03-02": {
+        "name": "BCP-007-03 Controller",
+        "specs": [{
+            "spec_key": "testing-facade",
+            "api_key": "testquestion"
+        }, {
+            "spec_key": "is-04",
+            "api_key": "query",
+            "disable_fields": ["host", "port"]
+        }, {
+            "spec_key": "is-05",
+            "api_key": "connection",
+            "disable_fields": ["host", "port"]
+        }],
+        "class": BCP0070302Test.BCP0070302Test
     },
     "BCP-004-02-01": {
         "name": "BCP-004-02 Sender Capabilities",
